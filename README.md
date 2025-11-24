@@ -21,7 +21,6 @@ The full methodology, results, and scientific discussion are provided in the man
 - **Multimodal fusion** of SEM image features + log-standardized magnification.
 - **Five CNN backbones evaluated**: RegNetY-400MF, ShuffleNetV2, EfficientNet-B0, MobileNetV3-Large, ResNet-18.
 - **Multitask learning**: 4 regression targets + 1 classification head.
-- **Systematic evaluation of 12 image-conversion pipelines**.
 - **Robustness tests** including Gaussian/Poisson noise, blur, gamma shift, JPEG/PNG compression.
 - **Out-of-sample generalization** on unseen Al6061-CMP and Ti6Al4V powders.
 - **Interpretability** via Grad-CAM and Integrated Gradients.
