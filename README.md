@@ -1,9 +1,8 @@
-# Multimodal-Framework-for-Powder-Flowability
-# 📘 Multimodal Framework for Powder Flowability Prediction
+# Multimodal Framework for Powder Flowability Prediction
 
 _A scientific, fully reproducible implementation accompanying the manuscript “Learning Flow from Microstructure: A Multimodal Framework for Powder Flowability”_
 
-## ⚡ Overview
+## Overview
 
 This repository provides the full PyTorch implementation of a **multimodal, multitask deep-learning framework** that predicts powder flowability from SEM microstructures and magnification metadata.  
 The framework jointly predicts:
@@ -17,7 +16,7 @@ The framework jointly predicts:
 The study uses **183,120 SEM–record pairs**, including **38 metallic powders**, each imaged in native **16-bit SEM** and converted via **12 distinct 16→8-bit pipelines**.  
 The full methodology, results, and scientific discussion are provided in the manuscript.
 
-## 🔬 Key Contributions
+## Key Contributions
 
 - **Multimodal fusion** of SEM image features + log-standardized magnification.
 - **Five CNN backbones evaluated**: RegNetY-400MF, ShuffleNetV2, EfficientNet-B0, MobileNetV3-Large, ResNet-18.
@@ -28,7 +27,7 @@ The full methodology, results, and scientific discussion are provided in the man
 - **Interpretability** via Grad-CAM and Integrated Gradients.
 - **Fully reproducible code**, with config system, dataset loaders, trainer module, and metric evaluation.
 
-## 📂 Repository Structure
+## Repository Structure
 
 ```
 MULTIMODAL-FRAMEWORK-FOR-POWDER-FLOWABILITY
@@ -67,7 +66,7 @@ MULTIMODAL-FRAMEWORK-FOR-POWDER-FLOWABILITY
 └── README.md
 ```
 
-## 📦 Installation
+## Installation
 
 ```bash
 git clone https://github.com/PowderAI/Multimodal-Framework-for-Powder-Flowability.git
@@ -77,13 +76,13 @@ conda activate powderflow
 pip install -r requirements.txt
 ```
 
-## 🧪 Dataset Description
+## Dataset Description
 
 - **38 metallic powders**, SEM at 16-bit grayscale
 - Converted using **12 different methods** (FS, LS, PS, PC, GC, CLAHE, ImageJ, etc.)
 - Dataset files include: train_data.csv, val_data.csv, test_data.csv
 
-## 🔧 Running Training
+## Running Training
 
 ```bash
 python main.py --train
@@ -98,7 +97,7 @@ python main.py --evaluate
 Hyperparameters & paths are defined in:  
 `configs/config.py`
 
-## 🎯 Model Architecture
+## Model Architecture
 
 - CNN backbone (RegNetY/ShuffleNetV2/EfficientNet/ResNet/MobileNetV3)
 - Magnification → log-transform → standardize → MLP
